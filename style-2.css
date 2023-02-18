@@ -1,0 +1,302 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', serif;
+  background: #F5F3EF;
+}
+
+section {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.mobile-btn {
+  display: none;
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+.nav-bar-mid, 
+h1, h2, h3, footer {
+  font-family: 'Roboto Serif', serif;
+}
+
+p {
+  color: #646464;
+}
+
+.nav-bar-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.nav-bar-left {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  width: 30%;
+  font-weight: 500;
+}
+.nav-bar-left li{
+  list-style: none;
+  display: inline-block;
+  font-size: 15px;
+  padding: 0 20px;
+}
+
+.nav-bar-left li::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #FEBD2F;
+    display: block;
+    margin: auto;
+    transition: 0.2s;
+}
+
+.nav-bar-left li:hover::after {
+  width: 100%;
+}
+
+.nav-bar-mid {
+  padding: 0;
+}
+
+.nav-bar-mid li,
+.nav-bar-right ul li{
+  list-style: none;
+}
+
+.nav-bar-right {
+  margin: 27px 0;
+  width: 30%;
+  text-align: right
+}
+
+.nav-bar-container a {
+  text-decoration: none;
+  color: black;
+}
+
+#get-started-btn {
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
+  border-radius: 40px;
+  transition: 0.2s;
+}
+
+#get-started-btn:hover {
+  background-color: #FEBD2F;
+  color: black;
+}
+
+.header-txt {
+  text-align: center;
+  margin: 70px 0 80px;
+}
+
+main {
+  display: flex;
+  gap: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+  margin: 0px 50px;
+}
+
+.input-field {
+  margin: 7px 0;
+  padding: 5px 3px;
+  font-size: 18px;
+}
+
+
+
+.submit-btn,
+.reset-btn {
+  margin: 29px 0;
+  background-color: #F5F3EF;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  box-shadow:0 2px 24px 0 rgb(220, 220, 220);
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #FEBD2F;
+}
+
+.course-selector {
+  width: 350px;
+  margin: 0 auto;
+}
+
+#fieldSelect {
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  background: #FEBD2F;
+  box-shadow:0 2px 24px 0 rgb(220, 220, 220);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#fieldSelect img {
+  width: 32px;
+}
+
+#courseList {
+  background: #fdd98b;
+  box-shadow:0 2px 24px 0 rgb(220, 220, 220);
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 0;
+}
+
+
+.choices {
+  width: 100%;
+  padding: 10px 26px;
+  list-style: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+}
+
+.choices:hover {
+  background-color: #FEBD2F;
+}
+
+.hide-list {
+  visibility: hidden;
+}
+
+.error-msg {
+  color: red;
+}
+.student-display-container {
+  text-align: center;
+}
+
+.student-display-container h2 {
+  font-size: 55px;
+  font-weight: 300;
+}
+
+.student-record-display-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.student-box {
+  border-radius: 15px;
+}
+
+.student-box:nth-child(odd) {
+  background-color: #FEBD2F;
+}
+
+.student-box:nth-child(even) {
+  border: 1px solid black;
+}
+
+footer {
+  text-align: center;
+  background-color: #FEBD2F;
+  padding: 5px 0px;
+  margin: 36px 0 0;
+  height: 7vh;
+}
+
+footer ul li{
+  list-style: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    flex-direction: column-reverse;
+  }
+  #courseList {
+    position: absolute;
+    width: inherit;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .nav-bar-left {
+    display: none;
+  }
+
+  .nav-bar-mid {
+    width: 64%;
+    margin-right: 0;
+}
+
+  .mobile-btn {
+    display: block;
+  }
+  
+  .mobile-menu-btn {
+    display: inline-block;
+  }
+
+  .nav-bar-right{
+    position: absolute;
+    color: black;
+    background: #FEBD2F;
+    font-size: 20px;
+    margin: 0;
+    border-radius: 40px 0 0 40px;
+    height: 100vh;
+    width: 50%;
+    top: -1000px;
+    right: 0;
+    text-align: left;
+    z-index: 2;
+  }
+
+  .nav-bar-right ul li{
+    margin: 30px 0;
+  }
+
+  .close-btn {
+    margin: 10px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    width: 35px;
+    height: 35px;
+  }
+
+  #get-started-btn {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+}

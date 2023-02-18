@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,500;8..144,700&display=swap" rel="stylesheet">
+  <title>Sweet Berries - Registration</title>
+  <link href="style-2.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <section>
+    <nav class="nav-bar-container">
+      <ul class="nav-bar-left">
+        <li><a href="index-2.html">Courses</a></li>
+        <li><a href="index.html">About us</a></li>
+      </ul>
+      <ul class="nav-bar-mid">
+        <li><a href="index.html" style="font-size: 25px;">Sweet Berries</a></li>
+        <li><a href="index.html" style="font-size: 12px;">Cooking School</a></li>
+      </ul>
+      <div class="nav-bar-right" id="navBar">
+        <img class="mobile-btn close-btn" src="assets/close-menu.png" onclick="hideMenu()"/>
+        <ul>
+          <li><a href="index-2.html" class="mobile-menu-btn">Courses</a></li>
+          <li><a href="index.html" class="mobile-menu-btn">About us</a></li>
+          <li><a href="index-2.html" id="get-started-btn">Get Started</a></li>
+        </ul>
+      </div>
+    </nav>
+    <img class="mobile-btn menu-btn" 
+      src="assets/menu.png" onclick="showMenu()"/>
+    <div class="header-txt">
+      <h1>Your Chef Career Starts Here!</h1>
+    <p>Please fill out the fields below and select a course from the drop down menu</p>
+    </div>
+    
+    <main>
+      
+      <form id="student-record-input">
+        <p class="name-error error-msg"></p>
+        <input 
+          class="input-field"
+          type="text" 
+          placeholder="First Name" 
+          id="first-name"
+          required />
+        <p class="name-error error-msg"></p>
+        <input 
+          class="input-field" 
+          type="text" 
+          placeholder="Last Name" 
+          id="last-name"
+          required />
+        <p class="age-error error-msg"></p>
+        <input 
+          class="input-field" 
+          type="text" 
+          placeholder="Age (Teen's Kitchen)" 
+          id="age" />
+        <p class="email-error error-msg"></p>
+        <input 
+          class="input-field" 
+          type="email" 
+          placeholder="Email" 
+          id="email"
+          required />
+        <p class="password-error error-msg"></p>
+        <input 
+          class="input-field" 
+          type="password" 
+          placeholder="Password" 
+          id="password"
+          required />
+        <p class="verify-password-error error-msg"></p>
+        <input 
+          class="input-field" 
+          type="password" 
+          placeholder="Verify Password" 
+          id="verify-password"
+          required />
+        <button class="submit-btn">Submit</button>
+      </form>
+      <div class="course-selector">
+        <p class="course-warning-msg error-msg"></p>
+        <div id="fieldSelect">
+          <h3 id="selectedCourse">Select a Course</h3>
+          <img src="assets/dropdown-arrow.png" />
+        </div>
+        <ul id="courseList" class="hide-list">
+          <li class="choices"><p>Chef Skills</p></li>
+          <li class="choices"><p>Cooking Essentials</p></li>
+          <li class="choices"><p>Nutrition in Cooking</p></li>
+          <li class="choices"><p>Plant-based Cooking</p></li>
+          <li class="choices"><p>Teen's Kitchen</p></li>
+        </ul>
+        <div id="register-complete"><p></p></div>
+      </div>
+      
+    </main>
+    <button class="reset-btn" onclick="resetFields()">Reset Fields</button>
+    <div class="student-display-container">
+      <h2>Registered Students</h2>
+      <div class="student-record-display-container"></div>
+    </div>
+    
+  </section>
+   <footer>
+    <ul class="footer-logo">
+        <li><a href="index.html" style="font-size: 15px;">Sweet Berries</a></li>
+        <li><a href="index.html" style="font-size: 8px;">Cooking School</a></li>
+      </ul>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
