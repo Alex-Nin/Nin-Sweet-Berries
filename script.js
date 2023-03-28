@@ -73,16 +73,6 @@ function createStudentElement({ fname, lname, email, course }) {
   studentsContainer.appendChild(studentDiv);
 }
 
-// Sets age input to required depending on which course user selects
-document.querySelectorAll('.choices').forEach(choice => {
-  choice.addEventListener('click', e => {
-    if (e.target.innerHTML === "Teen's Kitchen") {
-      ageInput.required = true;
-    }else {
-      ageInput.required = false;
-    }
-  })
-})
 
 // Function that checks and then submits form
 function updateRegistrationData(e) {

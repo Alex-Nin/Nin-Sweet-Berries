@@ -163,22 +163,20 @@ main {
 
 .class-info a {
   text-decoration: none;
+  text-align: center;
   color: black;
   border: 1px solid black;
-  width: 33%;
-  padding: 10px 22px;
-  border-radius: 40px;
-}
-
-.class-info button {
-  text-decoration: none;
-  color: black;
-  border: 1px solid black;
-  width: 63%;
+  width: 50%;
   padding: 12px 22px;
   border-radius: 40px;
-  font-size: 18px;
+  font-size: 1.1rem;
   background-color: white;
+  transition: 0.3s;
+}
+
+.class-info a:hover {
+  background-color: #FEBD2F;
+  border: solid 1px #FEBD2F;
 }
 
 footer {
